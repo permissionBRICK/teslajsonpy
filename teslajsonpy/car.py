@@ -300,7 +300,7 @@ class TeslaCar:
     @property
     def heading(self) -> int:
         """Return heading."""
-        return self._vehicle_data.get("drive_state", {}).get("heading")
+        return self._vehicle_data.get("location_data", {}).get("heading")
 
     @property
     def homelink_device_count(self) -> int:
@@ -384,12 +384,12 @@ class TeslaCar:
     @property
     def longitude(self) -> float:
         """Return longitude."""
-        return self._vehicle_data.get("drive_state", {}).get("longitude")
+        return self._vehicle_data.get("location_data", {}).get("longitude")
 
     @property
     def latitude(self) -> float:
         """Return latitude."""
-        return self._vehicle_data.get("drive_state", {}).get("latitude")
+        return self._vehicle_data.get("location_data", {}).get("latitude")
 
     @property
     def max_avail_temp(self) -> float:
@@ -404,29 +404,29 @@ class TeslaCar:
     @property
     def native_heading(self) -> int:
         """Return native heading."""
-        return self._vehicle_data.get("drive_state", {}).get("native_heading")
+        return self._vehicle_data.get("location_data", {}).get("native_heading")
 
     @property
     def native_location_supported(self) -> int:
         """Return native location supported."""
-        return self._vehicle_data.get("drive_state", {}).get(
+        return self._vehicle_data.get("location_data", {}).get(
             "native_location_supported"
         )
 
     @property
     def native_longitude(self) -> float:
         """Return native longitude."""
-        return self._vehicle_data.get("drive_state", {}).get("native_longitude")
+        return self._vehicle_data.get("location_data", {}).get("native_longitude")
 
     @property
     def native_latitude(self) -> float:
         """Return native latitude."""
-        return self._vehicle_data.get("drive_state", {}).get("native_latitude")
+        return self._vehicle_data.get("location_data", {}).get("native_latitude")
 
     @property
     def native_type(self) -> float:
         """Return native type."""
-        return self._vehicle_data.get("drive_state", {}).get("native_type")
+        return self._vehicle_data.get("location_data", {}).get("native_type")
 
     @property
     def odometer(self) -> float:
@@ -481,7 +481,7 @@ class TeslaCar:
     @property
     def speed(self) -> float:
         """Return speed."""
-        return self._vehicle_data.get("drive_state", {}).get("speed")
+        return self._vehicle_data.get("location_data", {}).get("speed")
 
     @property
     def software_update(self) -> dict:
